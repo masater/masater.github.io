@@ -1,2 +1,2 @@
-#PSD - Plastic Scintillation Detector
+# PSD - Plastic Scintillation Detector
 Soon to be updated.
