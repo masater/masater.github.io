@@ -28,6 +28,11 @@ For **bold** and *italic* text use:
 *italic* or _italic_
 **bold** or __bold__
 ```
+## Commenting Out Signs
+To display a certain sign or sign combination, such as "\*\*bold\*\*", as plain text use "\\"sign in front of it:
+```markdown
+ \*\*bold\*\*
+```
 
 ## Lists
 **Ordered lists** are done via:  
@@ -38,8 +43,8 @@ For **bold** and *italic* text use:
   1. with
   2. subitems
 ```
-giving the following output:  
-1.I
+yielding the following output:  
+1. I
 2. am
 3. ordered
   1. with
@@ -71,27 +76,50 @@ Links and images can be inserted via:
 ## Inline Code and Code Blocks
 
 For inline code, use single backticks. For code blocks, use triple backticks or indent with four spaces.  
-**Note 1:** A backtick being ` and **not** '. On my keyboard, the single backtick ` is written by pressing "shift + ^".  
-**Note 2:** Close the inline code block by putting the single backtick or triple back tick at the end, respectively.  
-**Note 3:** Specify display styles my writing the language next to the three backticks.  
 ```markdown
 `inline code`
+\```
+Code
+Block
+\```
+```  
+> **Note 1:** A backtick is \` and **not** '. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
+Close the inline code block by putting the single backtick or triple backtick at the end, respectively. In general the number of backticks can be varied arbitrarily, as long as the box is closed with the same number of backticks.  
+Inside the Codeblock the text will be displayed as either plain text or in the style specified after the initial three backticks:
+```markdown
+\```markdown
+I am a markdown code block.
+Isn't this cool?
+\```
+```
+yielding:
+```markdown
+I am a markdown code block.
+Isn't this cool?
+```
 
+or for python:
+```
+\```python
+def function():
+    return "Code block"
+\```
+```
+yielding:
 ```python
 def function():
     return "Code block"
 ```
-
-
-> Note: Remove the additional spaces before the closing triple backticks in the actual Markdown file.
+> **Note**: Make sure to close code blocks with their respective number of backticks on a new line without spaces. This is because the program reading and displaying the file to you, expects the block to be closed in such a manner. If it encounters unexpected spaces like that can cause formatting issues.
 
 ## Blockquotes
 
 Prefix text with `>` to create a blockquote.
-
 ```markdown
 > This is a blockquote.
 ```
+which yields:
+> This is a blockquote.
 
 
 
