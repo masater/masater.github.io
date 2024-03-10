@@ -18,7 +18,7 @@ Titles and subtitles are created with a `#`-prefix. The number of `#` indicates 
 ## Plain Text and New Line
 
 Plain text can written directly into the .md file.  
-To start a new line leave two spaces ".." (. representing a space (" ")) at the end of the existing line and write the new line onto the next line in your markdown file.
+To start a new line, leave two spaces "  " at the end of the existing line and write the new line on the next line in your markdown file.
 
 ## Emphasis
 
@@ -32,9 +32,11 @@ For **bold** and *italic* text use:
 ## Lists
 **Ordered lists** are done via:  
 ```markdown
-1. I
+1.I
 2. am
 3. ordered
+  1. with
+  2. subitems
 ```
 giving the following output:  
 1. I
