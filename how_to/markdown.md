@@ -86,12 +86,12 @@ Block
 > **Note 1:** A backtick is \` and **not** '. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
 Close the inline code block by putting the single backtick or triple backtick at the end, respectively. In general the number of backticks can be varied arbitrarily, as long as the box is closed with the same number of backticks.  
 Inside the Codeblock the text will be displayed as either plain text or in the style specified after the initial three backticks:
+````markdown
 ```markdown
-\```markdown
 I am a markdown code block.
 Isn't this cool?
-\```
 ```
+````
 yielding:
 ```markdown
 I am a markdown code block.
@@ -99,12 +99,12 @@ Isn't this cool?
 ```
 
 or for python:
-```
-\```python
+`````
+```python
 def function():
     return "Code block"
-\```
 ```
+`````
 yielding:
 ```python
 def function():
@@ -114,7 +114,7 @@ def function():
 
 ## Blockquotes
 
-Prefix text with `>` to create a blockquote.
+Prefix text with ">" to create a blockquote.
 ```markdown
 > This is a blockquote.
 ```
