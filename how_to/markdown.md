@@ -39,7 +39,7 @@ For **bold** and *italic* text use:
   2. subitems
 ```
 giving the following output:  
-I
+1.I
 2. am
 3. ordered
   1. with
