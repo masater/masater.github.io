@@ -32,16 +32,18 @@ For **bold** and *italic* text use:
 ## Lists
 **Ordered lists** are done via:  
 ```markdown
-1.I
+1. I
 2. am
 3. ordered
   1. with
   2. subitems
 ```
 giving the following output:  
-1. I
+I
 2. am
 3. ordered
+  1. with
+  2. subitems
 
 **Unordered lists** are done via:  
 ```markdown
