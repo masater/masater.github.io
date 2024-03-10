@@ -13,7 +13,7 @@ Titles and subtitles are created with a `#`-prefix. The number of `#` indicates 
 ## Subtitle
 ### Subsubtitle
 ```
-**Note:** The `#`-prefix applies to everything that follows in the same line, but only if there is a space (' ') between it and the text, e.g., "# Title" and not "#Title".
+> **Note:** The `#`-prefix applies to everything that follows in the same line, but only if there is a space (' ') between it and the text, e.g., "# Title" and not "#Title".
 
 ## Plain Text and New Line
 
@@ -76,14 +76,14 @@ Links and images can be inserted via:
 ## Inline Code and Code Blocks
 
 For inline code, use single backticks. For code blocks, use triple backticks or indent with four spaces.  
-```markdown
+`````markdown
 `inline code`
-\```
+```
 Code
 Block
-\```
-```  
-> **Note 1:** A backtick is \` and **not** '. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
+```
+`````
+> **Note:** A backtick is \` and **not** '. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
 Close the inline code block by putting the single backtick or triple backtick at the end, respectively. In general the number of backticks can be varied arbitrarily, as long as the box is closed with the same number of backticks.  
 Inside the Codeblock the text will be displayed as either plain text or in the style specified after the initial three backticks:
 ````markdown
