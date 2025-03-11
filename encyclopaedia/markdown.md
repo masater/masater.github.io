@@ -28,6 +28,23 @@ For **bold** and *italic* text use:
 *italic* or _italic_
 **bold** or __bold__
 ```
+
+## Formulas
+For formuas in text like $x_0^{4}$ we can simply use \$ like this:
+```markdown
+$ x_0^{4} $
+```
+bigger, seperated lines like this:
+$$
+\sum_i n^2+1
+$$
+are introduces via \$\$:
+```markdown
+$$
+\sum_i n^2+1
+$$
+```
+
 ## Commenting Out Signs
 To display a certain sign or sign combination, such as "\*\*bold\*\*", as plain text use "\\"sign in front of it:
 ```markdown
@@ -83,7 +100,7 @@ Code
 Block
 ```
 `````
-> **Note:** A backtick is \` and **not** '. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
+> **Note:** A backtick is \` and **not** ' or ´. On my keyboard, the single backtick \` is written by pressing "shift + ^".  
 Close the inline code block by putting the single backtick or triple backtick at the end, respectively. In general the number of backticks can be varied arbitrarily, as long as the box is closed with the same number of backticks.  
 Inside the Codeblock the text will be displayed as either plain text or in the style specified after the initial three backticks:
 ````markdown
