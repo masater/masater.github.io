@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Masater - Particle Physicist</title>
+  <title>Masater - Particle Physicist & AI Researcher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root {
@@ -9,6 +9,7 @@
       --secondary-color: #0a192f;
       --text-color: #e6f1ff;
       --accent-color: #64ffda;
+      --highlight-color: #ff6b6b;
     }
 
     * {
@@ -52,64 +53,143 @@
 
     h1 {
       color: var(--primary-color);
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 1rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      font-weight: 800;
     }
 
     .subtitle {
       color: var(--accent-color);
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .tagline {
+      color: var(--highlight-color);
+      font-size: 1.1rem;
       margin-bottom: 2rem;
+      font-style: italic;
+    }
+
+    .hero-section {
+      background: rgba(10, 25, 47, 0.8);
+      padding: 3rem;
+      border-radius: 15px;
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(100, 255, 218, 0.2);
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .hero-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .fun-fact {
+      background: rgba(255, 107, 107, 0.15);
+      border: 1px solid var(--highlight-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .fun-fact em {
+      color: var(--highlight-color);
+      font-weight: 600;
     }
 
     .content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 2rem;
       margin-bottom: 4rem;
     }
 
     .section {
       background: rgba(10, 25, 47, 0.7);
-      padding: 2rem;
-      border-radius: 10px;
+      padding: 2.5rem;
+      border-radius: 15px;
       backdrop-filter: blur(10px);
       border: 1px solid rgba(100, 255, 218, 0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .section:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
     }
 
     h2 {
       color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--primary-color);
       margin-bottom: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
 
     p {
       margin-bottom: 1rem;
       font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .expertise-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .expertise-list li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .expertise-list li::before {
+      content: "▸";
+      color: var(--primary-color);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .project-highlight {
+      background: rgba(255, 107, 107, 0.1);
+      border-left: 4px solid var(--highlight-color);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 5px;
     }
 
     .github-link {
       display: inline-block;
       background-color: var(--primary-color);
       color: var(--secondary-color);
-      padding: 0.8rem 1.5rem;
+      padding: 1rem 2rem;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
+      border-radius: 8px;
+      font-weight: 700;
       transition: all 0.3s ease;
       margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .github-link:hover {
       background-color: var(--accent-color);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
     }
 
     .footer {
@@ -119,19 +199,60 @@
       font-size: 0.9rem;
     }
 
+    .cv-timeline {
+      margin: 2rem 0;
+    }
+
+    .cv-item {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+      position: relative;
+    }
+
+    .cv-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 12px;
+      height: 12px;
+      background: var(--primary-color);
+      border-radius: 50%;
+    }
+
+    .cv-title {
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-org {
+      color: var(--highlight-color);
+      font-weight: 600;
+    }
+
+    .cv-desc {
+      font-size: 0.95rem;
+      color: #b8c5d6;
+    }
+
     @media (max-width: 768px) {
       .container {
         padding: 1rem;
       }
       
       h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+      }
       
       .content {
         grid-template-columns: 1fr;
       }
+
+      .hero-section {
+        padding: 2rem;
+      }
     }
-  }
   </style>
 </head>
 <body>
@@ -140,37 +261,150 @@
   <div class="container">
     <header>
       <h1>Masater</h1>
-      <div class="subtitle">Particle Physicist - Researcher - Founder</div>
+      <div class="subtitle">Particle Physicist • AI Researcher • Founder</div>
+      <div class="tagline">Exploring the frontiers of physics and artificial intelligence</div>
     </header>
+
+    <div class="hero-section">
+      <div class="hero-text">
+        I am a particle physicist turned AI researcher, currently pioneering AI-driven virtual cell simulations for drug validation. My work focuses on developing more generalizable approaches than traditional methods, combining deep expertise in fundamental physics with cutting-edge machine learning techniques.
+      </div>
+    </div>
+
+    <div class="fun-fact">
+      <em>Fun Fact:</em> My favorite theorem in physics is the Noether theorem from Emmy Noether - a beautiful connection between symmetries and conservation laws that lies at the heart of modern physics.
+    </div>
 
     <div class="content">
       <div class="section">
-        <h2>About Me</h2>
-        <p>I am a particle physicist with a deep passion for understanding the fundamental building blocks of our universe. My research focuses on exploring the unknowns of particle physics and developing innovative solutions to complex scientific challenges.</p>
-      </div>
+        <h2>Expertise & Core Competencies</h2>
+        
+        <h3>Theoretical Physics</h3>
+        <ul class="expertise-list">
+          <li>Electroweak interaction theory</li>
+          <li>Neutrino physics and GSW-model</li>
+          <li>Gauge theory and quantum field theory</li>
+          <li>Quantum mechanics and quantum field theory</li>
+          <li>General & special relativity</li>
+        </ul>
 
-      <div class="section">
-        <h2>Research & Projects</h2>
-        <p>My past projects spanned accross multiple domains, including:</p>
-        <ul>
+        <h3>Experimental Physics</h3>
+        <ul class="expertise-list">
+          <li>Plastic scintillation detectors</li>
           <li>Particle detection and analysis</li>
           <li>High-energy physics experiments</li>
-          <li>Scientific computing and data analysis</li>
-          <li>Efficiency optimized wind turbines</li>
-          <li>AI reconstructed customized footwear</li>
-          <li>And more!</li>
+          <li>Experimental data analysis</li>
+        </ul>
+
+        <h3>Artificial Intelligence & Machine Learning</h3>
+        <ul class="expertise-list">
+          <li>Deep learning and neural networks</li>
+          <li>Computer vision and image processing</li>
+          <li>Advanced machine learning architectures</li>
+          <li>AI-driven simulation systems</li>
+        </ul>
+
+        <h3>Mathematical Foundation</h3>
+        <ul class="expertise-list">
+          <li>Advanced linear algebra</li>
+          <li>Complex analysis and statistics</li>
+          <li>Representation theory</li>
+          <li>Mathematical modeling</li>
+        </ul>
+
+        <h3>Technical Skills</h3>
+        <ul class="expertise-list">
+          <li>Rapid prototyping and iterative development</li>
+          <li>3D modeling and mesh processing</li>
+          <li>Data analysis and visualization</li>
+          <li>Hardware firmware adaptation</li>
         </ul>
       </div>
 
       <div class="section">
+        <h2>Professional Journey</h2>
+        
+        <div class="cv-timeline">
+          <div class="cv-item">
+            <div class="cv-title">AI Virtual Cell Simulations</div>
+            <div class="cv-org">Current Project - San Francisco</div>
+            <div class="cv-desc">Leading development of AI-driven virtual cell simulations for drug validation, focusing on generalizable approaches beyond traditional methods. Relocated to San Francisco for this venture and am one of the elected residents in the residency program.</div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-title">Technical Co-Founder</div>
+            <div class="cv-org">URBNC3 - Custom Footwear Technology</div>
+            <div class="cv-desc">Developed AI-powered 3D reconstruction algorithms for custom footwear production, achieving 10,000x speed improvement from 4-5 hours to 1.5-2.5 seconds per pair.</div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-title">Wind Turbine Innovation</div>
+            <div class="cv-org">Startup Venture</div>
+            <div class="cv-desc">Developed novel wind turbine design with optimized efficiency curves for different wind speeds, focusing on broadening maximum efficiency peaks.</div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-title">Particle Physicist & Residing Physicist</div>
+            <div class="cv-org">CERN & CERN IdeaSquare Innovation Center</div>
+            <div class="cv-desc">Contributed to the 3DET collaboration developing 3D printed scintillator detectors, adapted hardware firmware for experimental data collection, contributed to FASERnu and Hyper-K experiments, built a plastic scintillation detector exhibition prototype, and conducted fundamental R&D research on particle detection systems.</div>
+          </div>
+
+          <div class="cv-item">
+            <div class="cv-title">Master's in Physics</div>
+            <div class="cv-org">ETH Zürich</div>
+            <div class="cv-desc">During my general master's degree, I specialized in particle physics, HEP, and electroweak physics (including neutrino physics), building strong mathematical and theoretical foundations.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Current Focus: AI Virtual Cell Simulations</h2>
+        
+        <div class="project-highlight">
+          <strong>Advanced Approach:</strong> Developing AI-driven virtual cell simulations that go beyond traditional drug validation methods, creating more generalizable and accurate predictive models.
+        </div>
+
+        <p>My current research focuses on leveraging my expertise in mathematical modeling, data analysis, and machine learning to create virtual cell simulation systems that can accurately predict drug interactions and effects. This work combines:</p>
+        
+        <ul class="expertise-list">
+          <li>Advanced mathematical modeling techniques</li>
+          <li>Deep learning architectures for biological systems</li>
+          <li>High-performance computing and simulation</li>
+          <li>Integration of experimental physics methodologies</li>
+        </ul>
+
+        <p>This project represents the convergence of my background in fundamental physics research with cutting-edge AI applications, aiming to advance how we approach drug discovery and validation.</p>
+      </div>
+
+      <div class="section">
+        <h2>Notable Achievements</h2>
+        
+        <div class="project-highlight">
+          <strong>10,000x Performance Improvement:</strong> At URBNC3, developed AI algorithms that reduced custom footwear production time from 4-5 hours to 1.5-2.5 seconds per pair.
+        </div>
+
+        <div class="project-highlight">
+          <strong>CERN Innovation:</strong> Contributed to the 3DET collaboration developing 3D printed scintillator detectors, adapted hardware firmware for experimental data collection, built a plastic scintillation detector exhibition prototype, and contributed to FASERnu and Hyper-K experiments.
+        </div>
+
+        <div class="project-highlight">
+          <strong>Startup Success:</strong> Co-founded and led technical development at URBNC3, creating AI-powered custom footwear technology.
+        </div>
+
+        <div class="project-highlight">
+          <strong>Academic Excellence:</strong> Graduated from ETH Zürich with specialization in particle physics, HEP, and electroweak physics, building expertise in gauge theory and quantum field theory.
+        </div>
+      </div>
+
+      <div class="section">
         <h2>GitHub Projects</h2>
-        <p>Explore and learn about my projects on GitHub.</p>
+        <p>Explore my open-source contributions and research projects on GitHub.</p>
         <a href="https://github.com/masater" class="github-link" target="_blank">View My GitHub</a>
       </div>
     </div>
 
     <footer class="footer">
-      <p>© 2025 Masater - Exploring and challenging the unknowns of existence through methodical science</p>
+      <p>© 2025 Masater - Bridging fundamental physics with cutting-edge AI applications</p>
     </footer>
   </div>
 
@@ -179,7 +413,7 @@
     particlesJS('particles-js', {
       particles: {
         number: {
-          value: 80,
+          value: 100,
           density: {
             enable: true,
             value_area: 800
@@ -192,7 +426,7 @@
           type: 'circle'
         },
         opacity: {
-          value: 0.5,
+          value: 0.6,
           random: true
         },
         size: {
@@ -208,7 +442,7 @@
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 3,
           direction: 'none',
           random: true,
           straight: false,
